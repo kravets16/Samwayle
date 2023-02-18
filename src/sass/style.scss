@@ -1,0 +1,61 @@
+/* ===============base=============== */
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/mixins';
+
+/* ==========blocks=========== */
+@import 'blocks/btn';
+@import 'blocks/about';
+/* @import 'blocks/'; */
+/* @import 'blocks/'; */
+/* @import 'blocks/'; */
+
+/*============settings================= */
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	/* font-family: 'Alegreya Sans', sans-serif; */
+	/* font-family: 'Cedarville Cursive', cursive; */
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.container {
+	max-width: calc(1200px + 18px + 18px);
+	margin: 0 auto;
+	padding: 0 18px;
+}
+
+.title {
+	font-weight: 700;
+	line-height: 100%;
+	color: $title-color;
+	&-fz63 {
+		font-size: 63px;
+	}
+	&-fz38 {
+		font-size: 38px;
+	}
+	&-fz28 {
+		font-size: 28px;
+	}
+}
+
+.subtitle {
+	font-family: 'Cedarville Cursive', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 53px;
+	color: $text-color;
+}
+
+.text {
+	font-family: 'Alegreya Sans', sans-serif; 
+	font-style: normal;
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 189%;
+	letter-spacing: 0.001em;
+	color: $text-color;
+}
