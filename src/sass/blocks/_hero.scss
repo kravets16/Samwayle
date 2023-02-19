@@ -1,0 +1,176 @@
+.hero {
+    margin-top: 50px;
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 26px;
+        @media (max-width: 992px) {
+            padding-bottom: 200px;
+        }
+        @media (max-width: 576px) {
+            padding-bottom: 0; 
+            text-align: center;
+            margin: 0 auto;
+            gap: 46px;
+        }
+        .subtitle {
+            @media (max-width: 576px) {
+                font-size: 19px;
+                text-align: center;
+                margin: 0 auto; 
+            }
+        }
+        &-title {
+            @media (max-width: 576px) {
+                text-align: center;
+                margin: 0 auto; 
+            }
+        }
+        &-btn {
+            @media (max-width: 576px) {
+                margin: 0 auto;
+                text-align: center; 
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        @media (max-width: 576px) {
+            display: none; 
+        }
+        &-btn {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 50px;
+            left: -159px;
+            width: 159px;
+            height: 157px;
+            background: rgba($light-gray, .4);
+            transition: all 1s ease;
+            @media (max-width: 992px) {
+                width: 109px;
+                height: 107px;
+                left: -109px;  
+            }
+            &:hover {
+                background: rgba($text-color, .1);
+            }
+        }
+        
+    }
+    &__swiper {
+        overflow: hidden;
+        width: 410px;
+        @media (max-width: 992px) {
+            width: 350px;
+        }
+        @media (max-width: 768px) {
+            width: 300px;
+        }
+        &-slide{
+            margin-bottom: 50px;
+            width: 410px;
+            height: 466px;
+            position: relative;
+            background-color:$light-gray;
+            @media (max-width: 992px) {
+                width: 350px;
+            }
+            @media (max-width: 768px) {
+                width: 300px;
+            }
+            img {
+                position: absolute;
+                bottom: -47px;
+                right: 25px;
+                @media (max-width: 992px) {
+                    max-width: 280px;
+                    height: auto;
+                }
+                @media (max-width: 768px) {
+                    max-width: 220px;
+                    height: auto;
+                    bottom: -27px;
+                }
+            }
+            /* &:nth-child(1) {
+                background-color:$light-gray;
+            }
+            &:nth-child(2) {
+                background-color:$light-gray;
+            }
+            &:nth-child(3) {
+                background-color:$light-gray;
+            }
+            &:nth-child(4) {
+                background-color:$light-gray;
+            }
+            &:nth-child(5) {
+                background-color:$light-gray;
+            } */
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        @media (max-width: 992px) {
+            max-width: 60px;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+        span {
+            white-space: nowrap;
+            padding-left: 0px;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 100%;
+            color: $text-color;
+            /* display: block; */
+            transform: rotate(-90deg) translateX(-50px);
+        }
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 1px solid $text-color;
+            border-radius: 50%;
+            transition: all .5s ease;
+            svg {
+                display: block;
+                width: 23px;
+                height: 23px;
+                path {
+                    transition: all .5s ease;
+                }
+            }
+            &:hover {
+                border: 1px solid $light-gray;
+                cursor: pointer;
+                svg {
+                    fill: $light-gray;
+                    path {
+                        fill: $light-gray;
+                    }
+                }
+            }
+        }
+    }
+}

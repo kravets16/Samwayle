@@ -16,3 +16,14 @@
         })
     })
 }) */
+
+const swiper = new Swiper('.hero__swiper', {
+    slidesPerView: 1,
+    loop: true,
+    effect: 'slide',
+    speed: 100,
+    /* cssMode: true, */
+    navigation: {
+        nextEl: '.swiper-button-next',
+    },
+});

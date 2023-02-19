@@ -2,9 +2,12 @@
 @import 'base/reset';
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/swiper';
+@import 'base/swiper-vars';
 
 /* ==========blocks=========== */
 @import 'blocks/btn';
+@import 'blocks/hero';
 @import 'blocks/about';
 @import 'blocks/promotion';
 /* @import 'blocks/'; */
@@ -33,6 +36,9 @@ body {
 	color: $title-color;
 	&-fz63 {
 		font-size: 63px;
+		@media (max-width: 576px) {
+			font-size: 54px;
+		}
 	}
 	&-fz38 {
 		font-size: 38px;
