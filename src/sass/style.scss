@@ -9,7 +9,7 @@
 @import 'blocks/promotion';
 /* @import 'blocks/'; */
 /* @import 'blocks/'; */
-/* @import 'blocks/'; */
+@import 'blocks/footer';
 
 /*============settings================= */
 body {
@@ -36,6 +36,11 @@ body {
 	}
 	&-fz38 {
 		font-size: 38px;
+	}
+	&-fz32 {
+		font-size: 32px;
+		line-height: 140%;
+		letter-spacing: 0.02em;
 	}
 	&-fz28 {
 		font-size: 28px;

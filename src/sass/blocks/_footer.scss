@@ -1,0 +1,31 @@
+.footer {
+    &__wrapper {
+        position: relative;
+        margin: 131px auto 114px auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 176px;
+    }
+    &__map {
+        width: 646px;
+        height: 351px;
+        background-color: $primary-color;
+    }
+    &__descr {
+        &-list {
+            margin-top: 21px;
+        }
+        &-item {
+            font-family: 'Alegreya Sans';
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 189%;
+            letter-spacing: 0.001em;
+            color: $text-color;
+        }
+        &-item + &-item {
+            margin-top: 16px;
+        }
+    }
+}
