@@ -7,6 +7,7 @@
 
 /* ==========blocks=========== */
 @import 'blocks/btn';
+@import 'blocks/header';
 @import 'blocks/hero';
 @import 'blocks/about';
 @import 'blocks/promotion';
@@ -70,4 +71,8 @@ body {
 	line-height: 189%;
 	letter-spacing: 0.001em;
 	color: $text-color;
+}
+
+.none {
+	display: none;
 }
