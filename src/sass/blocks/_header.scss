@@ -8,7 +8,47 @@
         @media (max-width: 768px) {
             position: relative;
         }
+        .hamburger {
+            display: none;
+            margin: auto 0;
+            width: 27px;
+            height: 21px;
+            @media (max-width: 768px) {
+                display: block;
+            }
+            span {
+                display: block;
+                width: 27px;
+                height: 2px;
+                background: #141414;
+                border-radius: 5px;
+                transition: all .5s ease;
+            }
+            span + span {
+                margin-top: 7px;
+            }
+            &-active {
+                position: fixed;
+                top: 45px;
+                right: 18px;
+                z-index: 999;
+                padding-top: 8px;
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translateX(3px);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(3) {
+                        margin-top: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
         .nav {
+            
             &__list {
                 display: flex;
                 justify-content: center;
@@ -24,33 +64,18 @@
                     position: fixed;
                     z-index: 998;
                     top: 0;
-                    left: 0;
+                    left: -100%;
                     width: 100vw;
                     height: 100vh;
-                    background-color: rgba($background-color, .8);
+                    background-color: rgba($background-color, .9);
                     flex-direction: column;
                     justify-content: space-around;
                     gap: 0;
-
-
+                    transition: all 1s ease;
                 }
-                /* &-item {
-                    .btn {
-                        
-                        @media (max-width: 768px) {
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 100%;
-                            color: $title-color;
-                            white-space: nowrap;
-                            transition: all .5s ease;
-                            background-color: transparent;
-                            &:hover {
-                                color: $primary-color;
-                            } 
-                        } 
-                    }
-                } */
+                &-active {
+                    left: 0;
+                }
                 &-link {
                     font-weight: 400;
                     font-size: 16px;
@@ -71,18 +96,43 @@
                 &-social {
                     display: none;
                     a {
-
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 45px;
+                        height: 45px;
+                        border: 1px solid $text-color;
+                        border-radius: 50%;
+                        transition: all .5s ease;
+                        svg {
+                            display: block;
+                            width: 23px;
+                            height: 23px;
+                            path {
+                                transition: all .5s ease;
+                            }
+                        }
+                        &:hover {
+                            border: 1px solid $light-gray;
+                            cursor: pointer;
+                            svg {
+                                fill: $light-gray;
+                                path {
+                                    fill: $light-gray;
+                                }
+                            }
+                        }
                     }
                     @media (max-width: 768px) {
-                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 30px;
+                        width: 100%;
+                        height: auto;
                     }
                 }
-                &-wrapper {
-                    /* display: flex; */
-                    /* justify-content: center; */
-                    /* align-items: center; */
-                    /* gap: 27px; */
-                }
+                
             }
         }
     }

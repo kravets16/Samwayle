@@ -1,12 +1,17 @@
 .hero {
-    /* margin-top: 50px; */
-    &__wrapper {
-        /* height: calc(100vh - 44px); */
+    height: calc(100vh - 44px);
+    @media (max-height: 520px) {
         height: 100%;
+    }
+    &__wrapper {
+        margin-top: 200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        @media (max-height: 520px) {
+            margin-top: 70px;
+        }
     }
     &__descr {
         display: flex;
